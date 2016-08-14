@@ -4,7 +4,7 @@ http://expressjs.com/en/starter/static-files.html
 */
 var express = require('express');
 var app = express();
-var port = 5000;
+app.set('port', (process.env.PORT || 80));
 
 app.use(express.static(__dirname + '/public'));
 
